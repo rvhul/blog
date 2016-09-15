@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new post_params
+    @post = Post.new(post_params)
 
     if @post.save
       redirect_to @post, notice: "hell ye dawg, u made ur post!"
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update post_params
+    if @post.update(post_params)
       redirect_to @post, notice: "hell ye dawg, ur modified post was saved"
     else
       render 'edit'
