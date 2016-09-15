@@ -1,17 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README would normally say something technical but I am Rahul, and I mess everything up.
 
 Things you may want to cover:
 
-* Ruby version
+* Oil Fluid
 
-* System dependencies
+* Transmission Fluid
 
-* Configuration
+* Windshield Washer Fluid
 
-* Database creation
+* Engine Oil
 
 * Database initialization
 
