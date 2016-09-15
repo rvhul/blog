@@ -1,0 +1,20 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+
+  <header>
+    <p class="date"><%= @project.created_at.strftime("%A, %B %d") %></p>
+    <h1><%= @project.title %></h1>
+    <hr id="project_content">
+  </header>
+
+  <div class="content">
+    <%= markdown @project.description %>
+
+    <div class="button_wrapper">
+      <a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%= @project.title %></a>
+    </div>
+
+  </div>
+
+  <hr id="post_content">
+
+</div>
