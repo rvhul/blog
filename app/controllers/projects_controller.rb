@@ -23,6 +23,23 @@ class ProjectsController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    if @project.update(project_params)
+      redirect_to @project, notice: "hell ye dawg, ur modified project post was saved"
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @project.destroy
+    redirect_to projects_path
+  end
+
 private
   def project_params
     params.require(:project).permit(:title, :description, :link, :slug)
