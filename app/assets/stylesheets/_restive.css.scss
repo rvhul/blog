@@ -1,0 +1,11 @@
+.mobi {
+  #main_navigation {
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+
+    .name {
+      font-size: 2em;
+    }
+  }
+}

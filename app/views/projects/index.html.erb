@@ -11,3 +11,11 @@
   <% end %>
 
 </div>
+
+<% if user_signed_in? %>
+  <div id="admin_links">
+    <%= link_to "New Project Post", new_project_path(@post) %>
+  </div>
+<% end %>
+
+<%= will_paginate @projects %>

@@ -8,6 +8,7 @@ $border: #e9e9e9;
 
 * {
   box-sizing: border-box;
+  background-color: #F6F7F2;
 }
 
 body {
@@ -93,6 +94,18 @@ hr {
   border-top: 2px solid $highlight;
   margin: 2rem 0;
 }
+
+// .mobi {
+//   #main_navigation {
+//     width: 100%;
+//     position: fixed;
+//     z-index: 10000;
+//
+//     .name {
+//       font-size: 2em;
+//     }
+//   }
+// }
 
 #main_navigation {
   padding: 2.5em 5%;
@@ -195,3 +208,4 @@ input[type="submit"], .button {
 @import 'welcome';
 @import 'articles_projects';
 @import 'pygments';
+@import 'restive';

@@ -2,10 +2,12 @@
 <html>
 <head>
   <title>Rahul Malhotra - Design, Develop, Deploy</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://use.fontawesome.com/ac9c9a9aa5.js"></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'restive' %>
   <%= csrf_meta_tags %>
 </head>
 <body>

@@ -22,5 +22,17 @@
     </div>
   <% end %>
 
+  <div id="share_box">
+    <p>Share '<%= @project.title %>'</p>
+    <!-- Twitter -->
+    <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @project.title %> by Rahul Malhotra - &amp;url=<%= url_for([@project, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <!-- Facebook -->
+    <a onclick="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= url_for([@project, {only_path: false}]) %>', '_blank','width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+    <!-- Google Plus -->
+    <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@project, {only_path: false}]) %>', '_blank','width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+  </div>
+
   <hr id="post_content">
 </div>

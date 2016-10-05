@@ -12,5 +12,10 @@
 
 </div>
 
+  <% if user_signed_in? %>
+    <div id="admin_links">
+      <%= link_to "New Post", new_post_path(@post) %>
+    </div>
+  <% end %>
 
 <%= will_paginate @posts %>
