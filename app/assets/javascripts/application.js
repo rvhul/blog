@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$( document ).ready(function() {
+$(document).on('turbolinks:load', function() {
     $('body').restive({
         breakpoints: ['10000'],
         classes: ['nb'],

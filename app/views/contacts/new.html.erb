@@ -1,8 +1,9 @@
-<div class="skinny_wrapper wrapper_padding">
+<div class="global_wrapper">
+  <div class="skinny_wrapper">
 
-<h1 id="page_title">Say Hello!</h1>
+    <h1 id="page_title">Say Hello!</h1>
 
-  <%= form_for @contact do |f| %>
+    <%= form_for @contact do |f| %>
     <%= f.label :name %><br>
     <%= f.text_field :name, required: true %>
 
@@ -22,6 +23,7 @@
     </div>
 
     <%= f.submit 'Send Message', class: "button" %>
-  <% end %>
+    <% end %>
 
+  </div>
 </div>

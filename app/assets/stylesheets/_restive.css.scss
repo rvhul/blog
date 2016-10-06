@@ -1,16 +1,30 @@
+//Styling for mobile only
 .mobi {
+  // * {
+  //   background-color: #34495e;
+  // }
+  //
+  // .name {
+  //   border: 2px solid #e74c3c;
+  // }
+  //
+  // h1, h2, h3, p {
+  //   color: #e74c3c;
+  // }
+
+  //navbar styling
   #main_navigation {
     width: 100%;
     position: fixed;
     z-index: 10000;
     top: 0;
     display: block;
+    font-size: small;
 
     nav {
-      // css for centering menu goes here (yet another reason to hate css)
+      //css for centering menu
       display: block;
       width: inherit;
-      // margin: 0 auto;
       text-align: center;
 
       a {
@@ -22,25 +36,18 @@
       a:not(:last-child) {
         margin-right: 0.75rem;
       }
-
-      a:active {
-
-      }
-
-      a:focus, a:hover {
-
-      }
     }
 
-
+    //logo
     .name {
       font-size: 2em;
       text-align: center;
     }
   }
 
+  //global wrapper for headings in each section
   .global_wrapper {
-    margin-top: 235px;
+    margin-top: 186px;
   }
 
   .wrapper {
@@ -66,4 +73,21 @@
       list-style: none;
     }
   }
+
+  .button_wrapper {
+    margin: 4em 0 4em 0;
+    text-align: center;
+  }
+  .project_button {
+      background: #8bc6db;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 1em 2em;
+      display: inline;
+  }
+
+  .wrapper_padding {
+    padding: 2rem 0;
+  }
+
 }

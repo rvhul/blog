@@ -1,38 +1,43 @@
-<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+<div class="global_wrapper">
+  <div id="post_show_content" class="skinny_wrapper wrapper_padding">
 
-  <header>
-    <p class="date"><%= @project.created_at.strftime("%A, %B %d") %></p>
-    <h1><%= @project.title %></h1>
-    <hr id="project_content">
-  </header>
+    <header>
+      <p class="date"><%= @project.created_at.strftime("%A, %B %d") %></p>
+      <h1><%= @project.title %></h1>
+      <hr id="project_content">
+    </header>
 
-  <div class="content">
-    <%= markdown @project.description %>
+    <div class="content">
+      <%= markdown @project.description %>
 
-    <div class="button_wrapper">
-      <a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%= @project.title %></a>
+      <div class="button_wrapper">
+        <a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%= @project.title %></a>
+      </div>
+
     </div>
 
-  </div>
-
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
     <div id="admin_links">
       <%= link_to "Edit project", edit_project_path(@project) %>
       <%= link_to "Delete project", project_path(@project), method: :delete, data: {confirm: 'Are you sure you want to delete this project post?'} %>
     </div>
-  <% end %>
+    <% end %>
 
-  <div id="share_box">
-    <p>Share '<%= @project.title %>'</p>
-    <!-- Twitter -->
-    <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @project.title %> by Rahul Malhotra - &amp;url=<%= url_for([@project, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <!-- Facebook -->
-    <a onclick="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= url_for([@project, {only_path: false}]) %>', '_blank','width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
-    <!-- Google Plus -->
-    <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@project, {only_path: false}]) %>', '_blank','width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+    <div id="share_box">
+      <p>Share '<%= @project.title %>'</p>
+      <!-- Twitter -->
+      <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @project.title %> by Rahul Malhotra - &amp;url=<%= url_for([@project, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <!-- Facebook -->
+      <a onclick="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= url_for([@project, {only_path: false}]) %>', '_blank','width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+      <!-- Google Plus -->
+      <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@project, {only_path: false}]) %>', '_blank','width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+    </div>
+
+    <hr id="post_content">
+    
+    <%= render 'disqus' %>
+
   </div>
-
-  <hr id="post_content">
 </div>
