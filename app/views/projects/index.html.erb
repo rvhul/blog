@@ -1,21 +1,23 @@
-<h1 id="page_title">Stuff I've Built</h1>
+<div class="global_wrapper">
+  <h1 id="page_title">Stuff I've Built</h1>
 
-<div id="posts_wrapper" class="skinny_wrapper">
+  <div id="posts_wrapper" class="skinny_wrapper">
 
-  <% @projects.each do |project| %>
+    <% @projects.each do |project| %>
     <div class="post">
       <p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
       <h2><a href="#"><%= link_to project.title, project %></a></h2>
       <hr>
     </div>
-  <% end %>
+    <% end %>
 
-</div>
+  </div>
 
-<% if user_signed_in? %>
+  <% if user_signed_in? %>
   <div id="admin_links">
     <%= link_to "New Project Post", new_project_path(@post) %>
   </div>
-<% end %>
+  <% end %>
 
-<%= will_paginate @projects %>
+  <%= will_paginate @projects %>
+</div>

@@ -1,32 +1,35 @@
-<div class="wrapper wrapper_padding clearfix">
+<div class="global_wrapper">
   
-  <div class="col-1 about homepage_content">
-    <h2>Hey there</h2>
-    <hr>
-    <p>My name is Rahul</p>
-    <p>I'm a front-end web developer</p>
-    <p>I'd like to share some of my thoughts with you, as well as things I've built for the web <i class="fa fa-smile-o"></i></p>
-  </div>
+  <div class="wrapper wrapper_padding clearfix">
+
+    <div class="col-1 about homepage_content">
+      <h2>Who I Am</h2>
+      <hr>
+      <p>I'm a front-end web developer</p>
+      <p>I'd like to share some of my thoughts with you, as well as things I've built for the web <i class="fa fa-smile-o"></i></p>
+    </div>
 
 
-  <div class="col-2 homepage_content">
-    <h2>Stuff I've Written</h2>
-    <hr>
+    <div class="col-2 homepage_content">
+      <h2>Stuff I've Written</h2>
+      <hr>
 
-    <% @post.each do |post| %>
-    <h3><a href="#"><%= link_to post.title, post %></a></h3>
-    <p class="date"><%= post.created_at.strftime ("%A, %b %d") %></p>
-    <% end %>
-  </div>
+      <% @post.each do |post| %>
+      <h3><a href="#"><%= link_to post.title, post %></a></h3>
+      <p class="date"><%= post.created_at.strftime ("%A, %b %d") %></p>
+      <% end %>
+    </div>
 
-  <div class="col-3 homepage_content">
-    <h2>Stuff I've Built</h2>
-    <hr>
+    <div class="col-3 homepage_content">
+      <h2>Stuff I've Built</h2>
+      <hr>
 
-    <% @projects.each do |project| %>
-    <h3><a href="#"><%= link_to project.title, project %></a></h3>
-    <p class="date"><%= project.created_at.strftime ("%A, %b %d") %></p>
-    <% end %>
+      <% @projects.each do |project| %>
+      <h3><a href="#"><%= link_to project.title, project %></a></h3>
+      <p class="date"><%= project.created_at.strftime ("%A, %b %d") %></p>
+      <% end %>
+    </div>
+
   </div>
 
 </div>

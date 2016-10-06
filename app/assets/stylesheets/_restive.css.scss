@@ -3,9 +3,67 @@
     width: 100%;
     position: fixed;
     z-index: 10000;
+    top: 0;
+    display: block;
+
+    nav {
+      // css for centering menu goes here (yet another reason to hate css)
+      display: block;
+      width: inherit;
+      // margin: 0 auto;
+      text-align: center;
+
+      a {
+        font-size: 80%;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      a:not(:last-child) {
+        margin-right: 0.75rem;
+      }
+
+      a:active {
+
+      }
+
+      a:focus, a:hover {
+
+      }
+    }
+
 
     .name {
       font-size: 2em;
+      text-align: center;
+    }
+  }
+
+  .global_wrapper {
+    margin-top: 235px;
+  }
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+
+    .about {
+      padding: 0 5% 0 2.5%;
+    }
+    .col-1 {
+      width: 100%;
+      display: list-item;
+      list-style: none;
+    }
+    .col-2 {
+      width: 100%;
+      display: list-item;
+      list-style: none;
+    }
+    .col-3 {
+      width: 100%;
+      display: list-item;
+      list-style: none;
     }
   }
 }
